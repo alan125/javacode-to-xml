@@ -3,10 +3,11 @@ package com.github.generator.xml;
 import com.github.javaparser.ast.expr.SimpleName;
 import com.thoughtworks.xstream.converters.SingleValueConverter;
 
-public class NameExprConverter implements SingleValueConverter {
+public class SimpleNameConverter implements SingleValueConverter {
+
     @Override
     public String toString(Object obj) {
-        return ((SimpleName) obj).getIdentifier();
+        return ((SimpleName)obj).getIdentifier();
     }
 
     @Override
